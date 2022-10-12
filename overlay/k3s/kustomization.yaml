@@ -6,4 +6,8 @@ bases:
   - ../../base/
 
 resources:
+  - ingress.yaml
   - applications/dev-minio.yaml
+
+patches:
+  - patches/argocd-cm.yaml
