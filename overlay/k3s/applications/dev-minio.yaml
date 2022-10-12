@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-minio
+spec:
+  destination:
+    server: "https://kubernetes.default.svc"
+  source:
+    path: overlay/dev
+    repoURL: https://github.com/sekthor/minio.git
+    targetRevision: HEAD
+  project: default
