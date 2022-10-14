@@ -8,6 +8,7 @@ bases:
 resources:
   - ingress.yaml
   - applications/dev-minio.yaml
+  - applications/cert-manager.yaml
 
 patches:
   #- patches/argocd-cm.yaml
