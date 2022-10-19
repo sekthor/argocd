@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-keycloak
+spec:
+  destination:
+    server: "https://kubernetes.default.svc"
+  source:
+    path: overlay/k3s
+    repoURL: https://github.com/sekthor/keycloak.git
+    targetRevision: HEAD
+  project: default
